@@ -12,7 +12,7 @@ def decrypt_message(packet, private_key, sender_pub_key):
         "ciphertext": packet["ciphertext"]
     }).encode()
 
-    # Vérification AVANT déchiffrement
+    # Vérification AVANT déchiffrement Nidot
     if not verify_signature(raw, packet["signature"], sender_pub_key):
         raise ValueError("Signature invalide !")
 
